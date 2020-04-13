@@ -13,3 +13,6 @@ RUN apk update \
 
 RUN pip3 --no-cache-dir install docker-compose
 RUN rm -f /var/cache/apk/* && rm -rf /root/.cache
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["sh"]
